@@ -1,4 +1,4 @@
-# Proxmox VE 8.2 & Proxmox Backup Server 3.2
+# Proxmox VE & Proxmox Backup Server
 
 # Preserve Network Interface Naming Script
 
@@ -7,7 +7,7 @@ It prevents network interfaces from being automatically renamed from "enp1", "en
 
 ## Purpose
 
-Proxmox VE 8.2 and Proxmox Backup Server 3.2 upgraded to the lastet 6.8 kernal. 
+Proxmox VE 8.2 and Proxmox Backup Server 3.2 introduce upgrades to the lastet 6.8 kernel.
 This causes the naming scheme for network interfaces to change, which can lead to invalid network configurations after a reboot. 
 This script helps users maintain consistency in their network interface naming scheme when upgrading to Proxmox VE 8.2 and Proxmox Backup Server 3.2.
 
@@ -41,6 +41,7 @@ This script helps users maintain consistency in their network interface naming s
 ## Notes
 
 - Ensure you have proper backups of your system before running the script, especially if you are making changes to network configurations.
+- Ideally ensure you have otherwise secured network access to the nodes where you're executing the script (BMC, OOB or a fully featured KVM console)
 - This script is designed for use with Proxmox VE environments but can be adapted for other Debian-based systems with similar network interface configurations.
 
 ## Contributing
